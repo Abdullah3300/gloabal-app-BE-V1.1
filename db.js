@@ -1,17 +1,5 @@
 const sql = require("mssql");
 
-// Database configuration
-// const config = {
-//   user: "apps_dba",
-//   password: "Apps@*786",
-//   server: "66.165.248.146",
-//   database: "GS_Apps",
-//   port: 80,
-//   options: {
-//     encrypt: false,
-//   },
-// };
-
 // Function to connect to the database
 async function connectToDatabase() {
   try {

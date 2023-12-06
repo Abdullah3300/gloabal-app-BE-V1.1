@@ -1,4 +1,4 @@
 [build]
+  command = "npm start"
   functions = "netlify/functions"
-  command = "npm start"  # Adjust if necessary
-  publish = "dist"  # Adjust if your static files are in a different directory
+  publish = "public"

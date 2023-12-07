@@ -1,11 +1,21 @@
 const sql = require("mssql");
 
+// Configuration for the database connection
+const config = {
+  user: "apps_dba",
+  password: "Apps@*786",
+  server: "66.165.248.146",
+  database: "GS_Apps",
+  options: {
+    encrypt: false, // Set to true if using Azure
+    trustServerCertificate: true,
+  },
+};
+
 // Function to connect to the database
 async function connectToDatabase() {
   try {
-    await sql.connect(
-      "Server=66.165.248.146;Database=GS_Apps;User Id=apps_dba;Password=Apps@*786;Encrypt=false;trustServerCertificate:true"
-    );
+    await sql.connect(config);
     console.log("Connected to SQL Server");
   } catch (err) {
     console.error("Error connecting to SQL Server:", err);
